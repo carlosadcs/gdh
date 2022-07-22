@@ -101,8 +101,7 @@ $('a[href^="#"]').on('click', function(e) {
         itens.forEach(addQuery);
     });
 </script>
-
-<!-- Script de backredirect !-->
+<!-- back-redirect -->
 <script>
     (function(b) {
         var a = {
@@ -114,10 +113,10 @@ $('a[href^="#"]').on('click', function(e) {
             },
             hasChanged: function() {
                 if (b.location.hash == "#no-back") {
-                    b.location.hash = "#";
+                    // b.location.hash = "#";
                     if (b.location.search == null || b.location.search == undefined || b.location.search ==
                         '') {
-                        b.location.href = “https://maximapotencianatural.ga/pages/oferta-especial/?src=back_home";
+                        b.location.href = "https://maximapotencianatural.ga/pages/oferta-especial/?src=back-redirect";
                     } else {
                         if (location.search.indexOf("src") > -1) {
                             var partes = location.search.slice(1).split('&');
@@ -129,13 +128,13 @@ $('a[href^="#"]').on('click', function(e) {
                                 var valor = chaveValor[1];
                                 data[chave] = valor;
                             });
-                            data.src = data.src + "-->back_home";
+                            data.src = data.src + "-->back-redirect";
                             new_search += JSON.stringify(data).replace(/[{}"]/g, "").replace(/[:]/g, "=")
                                 .replace(/[,]/g, "&");
     
                             b.location.href = "https://maximapotencianatural.ga/pages/oferta-especial/" + new_search;
                         } else {
-                            b.location.href = "https://maximapotencianatural.ga/pages/oferta-especial/" + b.location.search + "&src=back_home";
+                            b.location.href = "https://maximapotencianatural.ga/pages/oferta-especial/" + b.location.search + "&src=back-redirect";
                         }
                     }
                 }
@@ -159,7 +158,7 @@ $('a[href^="#"]').on('click', function(e) {
                         // b.location.hash = "#";
                         if (b.location.search == null || b.location.search == undefined || b.location.search ==
                             '') {
-                            b.location.href = "https://maximapotencianatural.ga/pages/oferta-especial/?src=back_home";
+                            b.location.href = "https://maximapotencianatural.ga/pages/oferta-especial/?src=back-redirect";
                         } else {
                             if (location.search.indexOf("src") > -1) {
                                 var partes = location.search.slice(1).split('&');
@@ -171,13 +170,13 @@ $('a[href^="#"]').on('click', function(e) {
                                     var valor = chaveValor[1];
                                     data[chave] = valor;
                                 });
-                                data.src = data.src + "-->back_home";
+                                data.src = data.src + "-->back-redirect";
                                 new_search += JSON.stringify(data).replace(/[{}"]/g, "").replace(/[:]/g, "=")
                                     .replace(/[,]/g, "&");
     
                                 b.location.href = "https://maximapotencianatural.ga/pages/oferta-especial/" + new_search;
                             } else {
-                                b.location.href = "https://maximapotencianatural.ga/pages/oferta-especial/" + b.location.search + "&src=back_home";
+                                b.location.href = "https://maximapotencianatural.ga/pages/oferta-especial/" + b.location.search + "&src=back-redirect";
                             }
                         }
                     }
@@ -200,7 +199,51 @@ $('a[href^="#"]').on('click', function(e) {
         a.init();
     }(window));
 </script>
-<!-- Back direct !-->
+    
+<script>
+    function getParameter(theParameter) {
+        var params = window.location.search.substr(1).split('&');
+    
+        for (var i = 0; i < params.length; i++) {
+            var p = params[i].split('=');
+            if (p[0] == theParameter) {
+                return decodeURIComponent(p[1]);
+            }
+        }
+        return false;
+    }
+    $(document).ready(function() {
+        setTimeout(function() {
+            $("body").mouseleave(function() {
+                if (window.location.search == null || window.location.search == undefined || window
+                    .location.search == '') {
+                    window.location.href = "https://maximapotencianatural.ga/pages/oferta-especial/?src=back-redirect";
+                } else {
+                    if (location.search.indexOf("src") > -1) {
+                        var partes = location.search.slice(1).split('&');
+                        var data = {};
+                        var new_search = '?';
+                        partes.forEach(function(parte) {
+                            var chaveValor = parte.split('=');
+                            var chave = chaveValor[0];
+                            var valor = chaveValor[1];
+                            data[chave] = valor;
+                        });
+                        data.src = data.src + "-->back-redirect";
+                        new_search += JSON.stringify(data).replace(/[{}"]/g, "").replace(/[:]/g,
+                            "=").replace(/[,]/g, "&");
+    
+                        window.location.href = "https://maximapotencianatural.ga/pages/oferta-especial/" + new_search;
+                    } else {
+                        window.location.href = "https://maximapotencianatural.ga/pages/oferta-especial/" + window.location.search +
+                            "&src=back-redirect";
+                    }
+                }
+            });
+        }, 8000);
+    });
+</script>
+<!-- end -->
 <!-- Meta Pixel Code -->
 	<script>
 		!function(f,b,e,v,n,t,s)
