@@ -120,6 +120,55 @@ section.oferta h3 {
     margin: 0 0 30px 0;
 }
 /* Oferta */
+/* Fórmula */
+section.formula {
+  padding: 75px 0;
+  background: #F2F1F1;
+}
+section.formula  h1 {
+  color: #000000;
+  font-size: 40px;
+  font-weight: 800;
+  text-align: center;
+  margin: 0 0 50px 0;
+}
+img.frasco-formula {
+    clear: both;
+    display: block;
+    width: 90%;
+    margin: auto;
+}
+section.formula p {
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.7;
+}
+a.cta-formula {
+    width: 40%;
+    margin: 50px auto 0 auto;
+}
+section.formula  h2 {
+  color: #000000;
+  font-size: 25px;
+  font-weight: 800;
+  text-align: center;
+  margin: 0 0 15px 0;
+}
+section.formula span {
+  clear: both;
+  display: block;
+  text-align: center;
+  color: #000000;
+  margin: 15px auto 0 auto;
+}
+img.icon-formula {
+    clear: both;
+    display: block;
+    width: 50%;
+    margin: 50px auto 0 auto;
+}
+/* Fórmula */
+
 /* FAQ */
 section.faq {
     background: #F2F1F1;
